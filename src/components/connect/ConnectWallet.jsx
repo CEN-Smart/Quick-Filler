@@ -27,11 +27,9 @@ xumm.user.account.then(a => {
 
 
 const logout = () => {
-  xumm.logout()
-  setAccount('')
-  
+  localStorage.removeItem("xumm_address");
+  setAccount('');
 }
-
 const login = async () => {
   if (window.localStorage.getItem("xumm_address") !== null) {
     const _account = localStorage.getItem('xumm_address');
