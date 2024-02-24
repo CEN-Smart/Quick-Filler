@@ -1,11 +1,11 @@
-.benefitContainer {
+/* .benefitContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 200px;
   width: 100%;
   height: 50vh;
-  position: relative; /* Make sure to use position:relative for absolute positioning */
+  position: relative;
 }
 
 .benefitText {
@@ -54,4 +54,4 @@
   .benefitText {
     width: 80%; 
   }
-}
+} */
