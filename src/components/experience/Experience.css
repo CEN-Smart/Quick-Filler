@@ -1,0 +1,130 @@
+.jumbotron {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 131px;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  position: relative;
+}
+
+.text-container {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 150px;
+}
+
+.style {
+  color: #409cd4;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.future {
+  color: #409cd4;
+  font-family: "Roboto";
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.filler {
+  color: #000000;
+  font-family: "Roboto";
+  font-size: 20px;
+  font-weight: 300px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.learn {
+  background-color: #409cd4;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  border: none;
+  margin-right: 30px;
+  margin-left: 100px;
+}
+.connect {
+  background-color: #189a59;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  border: none;
+}
+.cylinder {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+}
+
+.pic {
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .jumbotron {
+    flex-direction: column; 
+    height: auto; 
+    align-items: flex-start; 
+    padding: 20px; 
+    position: relative;
+  }
+
+  .text-container {
+    width: 100%;
+    margin-left: 0; 
+    margin-bottom: 20px; 
+  }
+
+  .cylinder {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0; 
+  }
+
+  .style,
+  .future,
+  .filler {
+    font-size: 32px;
+  }
+
+  .button-container {
+    margin-left: 0; 
+    margin-top: 20px; 
+  }
+
+  .learn,
+  .connect {
+    margin: 0; 
+  }
+}

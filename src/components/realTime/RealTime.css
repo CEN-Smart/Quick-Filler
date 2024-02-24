@@ -1,0 +1,122 @@
+.realTimeContainer {
+  margin-top: 200px;
+  width: 100%;
+  padding: 0 20px; /* Adjust padding instead of left */
+}
+
+.title {
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 56px;
+  letter-spacing: 0;
+  color: #409cd4;
+  text-align: center;
+  margin-bottom: 40px; /* Add margin bottom for spacing */
+}
+
+.cardContainer {
+  max-width: 1180px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-around; /* Center cards horizontally */
+  align-items: flex-start; /* Align cards to the top */
+  padding-bottom: 5rem;
+}
+
+.realTime-card {
+  width: 300px; /* Set fixed width for cards */
+  margin-bottom: 40px; /* Add margin bottom for spacing between cards */
+}
+
+.wide {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+.choose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-top: 30px;
+  margin-left: auto; /* Center the choose icon */
+  margin-right: auto; /* Center the choose icon */
+}
+
+.ultimate {
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #189a59;
+  margin-left: auto; /* Center the text */
+  margin-right: auto; /* Center the text */
+  text-decoration: none;
+}
+
+.mod {
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #409cd4;
+  margin-left: auto; /* Center the text */
+  margin-right: auto; /* Center the text */
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .cardContainer {
+    grid-template-columns: repeat(2, 1fr); 
+    grid-gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .realTimeContainer {
+    margin-top: 100px; 
+  }
+  
+  .title {
+    font-size: 30px; 
+    line-height: 48px;
+  }
+
+  .cardContainer {
+    grid-template-columns: repeat(1, 1fr); 
+    grid-gap: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .realTimeContainer {
+    margin-top: 50px;
+  }
+  
+  .title {
+    font-size: 30px; 
+    line-height: 44px;
+  }
+
+  .cardContainer {
+    grid-template-columns: repeat(1, 1fr); 
+    grid-gap: 15px;
+  }
+}

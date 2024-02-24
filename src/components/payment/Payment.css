@@ -1,0 +1,80 @@
+.payment-Container {
+  margin-top: 100px; 
+  width: 100%;
+  height: auto; 
+}
+
+.paymentTitle {
+  font-family: Roboto;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #409cd4;
+  margin-bottom: 20px; 
+}
+
+.paymentcard-Container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  grid-gap: 40px;
+  padding-bottom: 5rem;
+}
+
+.paymentcard-Container img {
+  width: 100%;
+}
+
+.spun {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #409cd4;
+}
+
+.step {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #000000;
+}
+
+.get,
+.modify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #189a59; 
+  text-decoration: none;
+  margin-top: 20px; 
+}
+
+@media (max-width: 768px) {
+  .payment-Container {
+    margin-top: 350px; 
+  }
+
+  .paymentTitle {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .paymentcard-Container {
+    grid-gap: 20px; 
+}
+}

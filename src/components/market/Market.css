@@ -1,0 +1,71 @@
+.marketContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 200px;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    left: 6px;
+  
+}
+.outline {
+    background-color: transparent;
+    color: #409cd4;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-right: 30px;
+    margin-left: 100px;
+    border: 1px solid #409CD4
+    
+
+}
+.wallet {
+    display: flex;
+    color: #189a59;
+    border: none;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0;
+    align-items: center;
+    background-color:transparent;
+  
+}
+@media (max-width: 768px) {
+    .marketContainer {
+      flex-direction: column; 
+      align-items: flex-start; 
+      margin-top: 100px; 
+    }
+  
+    .outline {
+      margin: 0;
+      padding: 20px; 
+      width: 40%; 
+      border: 1px solid #409CD4;
+    }
+  
+    .wallet {
+      margin-top: 20px; 
+      margin-left: 0; 
+    }
+  
+    .button-container {
+      flex-direction: column; 
+      align-items: flex-start; 
+      margin-top: 20px; 
+      margin-left: 100px; 
+    }
+  
+    .learn,
+    .connect {
+      margin: 10px 0;
+    }
+  }
+  

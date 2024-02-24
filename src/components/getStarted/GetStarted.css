@@ -1,0 +1,29 @@
+.getStartedContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px; 
+    width: 100%;
+    height: auto; 
+    padding: 0 20px; 
+  }
+  
+  .light {
+    width: 100%;
+    height: auto; 
+  }
+  
+  @media (max-width: 768px) {
+    .getStartedContainer {
+      flex-direction: column;
+      align-items: flex-start; 
+      margin-top: 50px; 
+    }
+  
+    .light {
+      width: 100%; 
+      height: auto; 
+      margin-bottom: 20px; 
+    }
+  }
+  
