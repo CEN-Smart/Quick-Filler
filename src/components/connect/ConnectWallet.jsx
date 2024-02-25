@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Xumm } from "xumm";
 
-const xumm = new Xumm(" 8d01558e-d605-4165-8a35-c0a8763800a8");
+const xumm = new Xumm("8d01558e-d605-4165-8a35-c0a8763800a8");
 
 function ConnectWallet() {
   const [account, setAccount] = useState("");
