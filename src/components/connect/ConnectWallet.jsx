@@ -26,7 +26,6 @@ function ConnectWallet() {
   const logout = () => {
     xumm.logout();
     setAccount("");
-    login();
   };
   const login = async () => {
     if (window.localStorage.getItem("xumm_address") !== null) {
@@ -52,7 +51,7 @@ function ConnectWallet() {
       )}
       {account !== "" ? (
         <>
-          <button onClick={logout} className="button">
+          <button onClick={login} className="button">
             Disconnect
           </button>
         </>
