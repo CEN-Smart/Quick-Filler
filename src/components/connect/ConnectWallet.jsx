@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Xumm } from "xumm";
+require ("dotenv").config()
 
-const xumm = new Xumm("8d01558e-d605-4165-8a35-c0a8763800a8");
+const xumm = new Xumm("API_KEY");
 
 function ConnectWallet() {
   const [account, setAccount] = useState("");
@@ -24,6 +25,8 @@ function ConnectWallet() {
   });
 
   const logout = () => {
+    //localStorage.removeItem("xumm_address")
+
     xumm.logout();
     setAccount("");
   };
@@ -51,7 +54,7 @@ function ConnectWallet() {
       )}
       {account !== "" ? (
         <>
-          <button onClick={login} className="button">
+          <button onClick={logout} className="button">
             Disconnect
           </button>
         </>
