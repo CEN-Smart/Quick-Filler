@@ -6,10 +6,10 @@ import "./RealTime.css"
 function RealTime() {
   return (
     <div className="realTimeContainer">
-      <h1 className="title">
+      <span className="realTimetitle">
         Real-time tracking for accurate <br />
         delivery updates
-      </h1>
+      </span>
       <div className="cardContainer">
         <div className="realTime-card">
           <img src={Fluent} alt="fluent" className="choose" />

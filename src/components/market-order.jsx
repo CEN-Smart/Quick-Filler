@@ -11,6 +11,7 @@ MarketOrder.propTypes = {
   btnGroup: PropTypes.bool,
   img: PropTypes.string,
   alt: PropTypes.string,
+
 };
 
 export function MarketOrder({

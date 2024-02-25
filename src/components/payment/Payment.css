@@ -48,8 +48,7 @@
   color: #000000;
 }
 
-.get,
-.modify {
+.get {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,6 +59,21 @@
   letter-spacing: 0em;
   text-align: center;
   color: #189a59; 
+  text-decoration: none;
+  margin-top: 20px; 
+
+}
+.modify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #409cd4; 
   text-decoration: none;
   margin-top: 20px; 
 }

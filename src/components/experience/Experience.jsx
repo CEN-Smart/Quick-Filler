@@ -1,4 +1,3 @@
-import './Experience.css';
 import Gas from '../../assets/cooking-gas.jpeg';
 import ConnectWallet from '../connect/ConnectWallet';
 

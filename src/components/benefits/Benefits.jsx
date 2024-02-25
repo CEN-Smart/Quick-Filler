@@ -1,6 +1,5 @@
 import cylinder from '../../assets/pngtree-storage-gas-cylinder-icon-png-image_4983070.png';
 
-import './Benefits.css';
 
 function Benefits() {
   return (

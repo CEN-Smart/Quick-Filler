@@ -16,7 +16,7 @@ export function RealTimeBenefits({ img, alt, label, link, linkLabel, icon }) {
       <img src={img} alt={alt} />
       <p className='text-lg md:text-xl lg:text-2xl text-center'>{label}</p>
       <Link to={link} className='flex items-center gap-2'>
-        <span>{linkLabel}</span>
+        <span >{linkLabel}</span>
         <span className='text-[#409CD4]'>{icon}</span>
       </Link>
     </div>
