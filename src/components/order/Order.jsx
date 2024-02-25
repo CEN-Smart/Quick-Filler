@@ -1,4 +1,4 @@
-import Fuel from '../../assets/fuelstaion.webp';
+import Fuel from '../../assets/fuelstation.webp';
 import './Order.css';
 
 function Order() {
