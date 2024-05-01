@@ -8,10 +8,12 @@ import pumpAttendant from "./../assets/maleAttendant.jpeg";
 import fluentBox from "./../assets/fluent_box-20-filled.png";
 import cookingGas from "./../assets/cookinggas2.jpeg";
 import { RealTimeBenefits } from "../components/real-time-benefits";
+import Header from "../components/navbar/Header";
 
 function LandingPage() {
   return (
     <div className="landingPageContainer">
+    <Header />
       <Experience />
       <Benefits />
       <MarketOrder

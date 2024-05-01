@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import logo from '../../assets/quickfiller.svg';
+import logo from '../../assets/QUICK_FILLER_logo_1_1-removebg-preview 1.png';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import ConnectWallet from '../connect/ConnectWallet';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
-function Header() {
+function Header({className}) {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
@@ -21,7 +21,7 @@ function Header() {
   window.addEventListener('scroll', changeColor);
 
   return (
-    <header>
+    <header className={className}>
       <Link to='/' className='logo'>
         <img src={logo} alt='logo' />
       </Link>
@@ -47,7 +47,7 @@ function Header() {
         {click ? (
           <FaTimes size={20} style={{ color: '#fff' }} />
         ) : (
-          <FaBars size={20} style={{ color: '#fff' }} />
+          <FaBars size={20} style={{ colyor: '#fff' }} />
         )}
       </div>
     </header>

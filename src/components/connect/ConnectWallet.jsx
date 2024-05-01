@@ -1,43 +1,50 @@
-import React, { useState, useEffect } from "react";
-import { Xumm } from "xumm";
-require ("dotenv").config()
+import React, { useState, useEffect } from 'react';
+import { Xumm } from 'xumm';
 
-const xumm = new Xumm("API_KEY");
+// Accessing the API key via Vite's environment variable handling
+const xumm = new Xumm(import.meta.env.VITE_XUMM_API_KEY);
 
 function ConnectWallet() {
-  const [account, setAccount] = useState("");
+  const [account, setAccount] = useState('');
 
   useEffect(() => {
-    async function output() {
-      if (window.localStorage.getItem("xumm_address") !== null) {
-        const _account = localStorage.getItem("xumm_address");
+    function output() {
+      const _account = window.localStorage.getItem('xumm_address');
+      if (_account) {
         setAccount(_account);
-        console.log("account on first render is ", account);
+        console.log('account on first render is ', _account);
       }
     }
     output();
   }, []);
 
-  xumm.user.account.then((a) => {
-    setAccount(a ?? "");
-    console.log("about to set account");
-    localStorage.setItem("xumm_address", account);
-  });
+  useEffect(() => {
+    async function fetchAccount() {
+      const a = await xumm.user.account;
+      setAccount(a ?? '');
+      console.log('about to set account');
+      if (a) {
+        localStorage.setItem('xumm_address', a);
+      }
+    }
+    fetchAccount();
+  }, []);
 
   const logout = () => {
-    //localStorage.removeItem("xumm_address")
-
     xumm.logout();
-    setAccount("");
+    setAccount('');
+    localStorage.removeItem('xumm_address');
   };
+
   const login = async () => {
-    if (window.localStorage.getItem("xumm_address") !== null) {
-      const _account = localStorage.getItem("xumm_address");
+    const _account = localStorage.getItem('xumm_address');
+    if (_account) {
       console.log(_account);
-      if (_account.length == 0) {
-        xumm.authorize();
+      if (_account.length === 0) {
+        await xumm.authorize();
+      } else {
+        setAccount(_account);
       }
-      setAccount(_account);
     } else {
       await xumm.authorize();
     }
@@ -45,22 +52,18 @@ function ConnectWallet() {
 
   return (
     <div>
-      {account === "" && !xumm.runtime.xapp ? (
-        <button onClick={login} className="button">
+      {account === '' && !xumm.runtime.xapp ? (
+        <button onClick={login} className="bg-[#189a59] py-2 px-3 text-white rounded-lg font-roboto font-medium" >
           Connect Wallet
         </button>
-      ) : (
-        ""
-      )}
-      {account !== "" ? (
+      ) : null}
+      {account !== '' ? (
         <>
           <button onClick={logout} className="button">
             Disconnect
           </button>
         </>
-      ) : (
-        ""
-      )}
+      ) : null}
     </div>
   );
 }

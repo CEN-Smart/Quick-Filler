@@ -13,19 +13,14 @@ header {
   top: 0;
 }
 
-
+.header-transparent {
+  background: transparent; 
+}
 .elements {
   padding: 0 1rem;
 
   color: #ffffff;
   font-size: 20px;
-  line-height: 24px;
-  text-decoration: none;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
-}
-
-.button {
-  background-color: #189a59;
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
@@ -37,6 +32,8 @@ header {
 
 .nav-menu {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 
