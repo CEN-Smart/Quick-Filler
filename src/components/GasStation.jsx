@@ -1,20 +1,22 @@
-import React,{useState} from "react";
-import Carousel, { serviceCarousel } from "../Carousel";
-import Header from "../navbar/Header";
+import React, { useState } from "react";
+import Locator from "../assets/locator.png";
+import Footer from "./Footer";
+import Header from "./navbar/Header";
+import Carousel, { serviceCarousel } from "./Carousel";
 import { useNavigate } from "react-router-dom";
 
-function Services() {
-  const [activeButton, setActiveButton] = useState('');
+function GasStation() {
+    const [activeButton, setActiveButton] = useState('');
 
   const navigate = useNavigate();
   const handleCardClick = (text) => {
     const route = text.toLowerCase().replace(/ /g, "-");
-    setActiveButton(text); 
+    setActiveButton(text); // Set the active button
     navigate(`/${route}`);
   };
-  
+
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header className="header header-transparent" />
       <div
         className="relative pt-16 pb-32 flex content-center items-center justify-center"
@@ -65,8 +67,30 @@ function Services() {
           </div>
         </div>
       </div>
+      <div className="container mt-28 flex-grow mx-auto  justify-center ">
+        <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto mt-10">
+          <div className="flex flex-col justify-center">
+            <p className=" text-2xl">
+              Quick Filler also offers a range of services to enhance your
+              overall experience and provide added value. Here are some of the
+              services we provide:
+            </p>
+            <p className=" text-2xl">
+              Gas Station Locator: Easily find nearby Quick Filler gas stations,
+              including operating hours, fuel types, and amenities.
+            </p>{" "}
+            <div>
+              <div>
+                <img src={Locator} alt="Related Product" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 }
 
-export default Services;
+export default GasStation;

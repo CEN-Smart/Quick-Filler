@@ -4,7 +4,7 @@ import { Xumm } from 'xumm';
 // Accessing the API key via Vite's environment variable handling
 const xumm = new Xumm(import.meta.env.VITE_XUMM_API_KEY);
 
-function ConnectWallet() {
+function ConnectWallet({btnText}) {
   const [account, setAccount] = useState('');
 
   useEffect(() => {
@@ -54,8 +54,7 @@ function ConnectWallet() {
     <div>
       {account === '' && !xumm.runtime.xapp ? (
         <button onClick={login} className="bg-[#189a59] py-2 px-3 text-white rounded-lg font-roboto font-medium" >
-          Connect Wallet
-        </button>
+{btnText}        </button>
       ) : null}
       {account !== '' ? (
         <>

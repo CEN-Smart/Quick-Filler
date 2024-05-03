@@ -41,7 +41,7 @@ function Header({className}) {
         <Link to='/more' className='elements'>
           More
         </Link>
-        <ConnectWallet />
+        <ConnectWallet btnText="Connect Wallet" />
       </div>
       <div className='hamburger' onClick={handleClick}>
         {click ? (

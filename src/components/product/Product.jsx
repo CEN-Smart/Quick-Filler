@@ -1,10 +1,18 @@
-import React from "react";
-import Carousel, { carouselImages, serviceCarousel } from "../Carousel";
+import React,{useState} from "react";
+import Carousel, { carouselImages} from "../Carousel";
 import Header from "../navbar/Header";
 import ProductCard from "../ProductCard";
 import Footer from "../Footer";
+import { useNavigate } from "react-router-dom";
 
 function Product() {
+const navigate = useNavigate()
+  const [activeProduct, setActiveProduct] = useState(null);
+
+  const handleCardClick = (btnTitle) => {
+    const route = btnTitle.toLowerCase().replace(" ", "-");
+    navigate(`/${route}`);  
+  };
   return (
     <div className="flex flex-col min-h-screen">
       <Header className="header header-transparent" />
@@ -35,25 +43,25 @@ function Product() {
               image="src/assets/cooking-gas.jpeg"
               btnTitle="Gas Cylinder"
               rating={4}
-              // onClick={handleCardClick}
+              onClick={() =>handleCardClick("Gas Cylinder")}
             />
             <ProductCard
               image="src/assets/Rectangle 42.png"
               btnTitle="Gas Filling"
               rating={3}
-              // onClick={handleCardClick}
+              onClick={() =>handleCardClick("Gas Filling")}
             />
             <ProductCard
               image="src/assets/burner.png"
               btnTitle="Gas Burner"
               rating={5}
-              // onClick={handleCardClick}
+              onClick={() =>handleCardClick("Gas Burner")}
             />
             <ProductCard
               image="src/assets/maleAttendant.jpeg"
               btnTitle="Petroleum Filling"
               rating={2}
-              // onClick={handleCardClick}
+              onClick={() =>handleCardClick("Petroleum Filling")}
             />
           </div>
         </div>

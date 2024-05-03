@@ -22,7 +22,7 @@ function Experience() {
             >
               Learn More
             </a>
-            <ConnectWallet />
+            <ConnectWallet btnText="Connect Wallet" />
           </div>
         </div>
         <div className=' basis-2/5 mt-8 md:mt-0 shrink-0'>

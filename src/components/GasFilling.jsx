@@ -1,20 +1,22 @@
-import React,{useState} from "react";
-import Carousel, { serviceCarousel } from "../Carousel";
-import Header from "../navbar/Header";
+import React, { useState } from "react";
+import Dl from "../assets/dl.png";
+import Footer from "./Footer";
+import Header from "./navbar/Header";
+import Carousel, { serviceCarousel } from "./Carousel";
 import { useNavigate } from "react-router-dom";
 
-function Services() {
-  const [activeButton, setActiveButton] = useState('');
+function GasFilling() {
+    const [activeButton, setActiveButton] = useState('');
 
   const navigate = useNavigate();
   const handleCardClick = (text) => {
     const route = text.toLowerCase().replace(/ /g, "-");
-    setActiveButton(text); 
+    setActiveButton(text); // Set the active button
     navigate(`/${route}`);
   };
-  
+
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header className="header header-transparent" />
       <div
         className="relative pt-16 pb-32 flex content-center items-center justify-center"
@@ -65,8 +67,27 @@ function Services() {
           </div>
         </div>
       </div>
+      <div className="container mt-28 flex-grow mx-auto  justify-center ">
+        <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto mt-10">
+          <div className="flex flex-col justify-center">
+            <h1 className=" text-green-600 font-normal text-6xl">
+              Gas Delivery Services
+            </h1>
+            <p className=" text-2xl">
+              Get your cooking gas cylinders <br/>delivered right to your desired <br/>location, at your preferred time.
+            </p>{" "}
+            <div>
+              <div>
+                <img src={Dl} alt="Related Product" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 }
 
-export default Services;
+export default GasFilling;

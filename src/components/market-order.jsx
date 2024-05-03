@@ -51,7 +51,7 @@ export function MarketOrder({
           </div>
           {btnGroup && (
             <div className='flex items-center gap-1'>
-              <LearnMoreButton /> <ConnectWallet />
+              <LearnMoreButton /> <ConnectWallet btnText="Connect Wallet"/>
             </div>
           )}
         </div>
