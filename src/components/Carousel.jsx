@@ -4,15 +4,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export const carouselImages = [
-    'src/assets/prd 1.png',
-    '/src/assets/prd 2.png',
-    '/src/assets/prd 3.png'
+    'src/assets/prd1.png',
+    '/src/assets/prd2.png',
+    '/src/assets/prd3.png'
   ];
   
   export const serviceCarousel = [
-    'src/assets/serv 1.png',
-    'src/assets/serv 2.png',
-    'src/assets/serv 3.png'
+    'src/assets/serv1.png',
+    'src/assets/serv2.png',
+    'src/assets/serv3.png'
   ];
   
 

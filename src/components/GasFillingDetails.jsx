@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Burner from "../assets/burner.png";
-import Blue from "../assets/Rectangle 42.png";
+import Blue from "../assets/Rectangle42.png";
 import Footer from "./Footer";
 import Header from "./navbar/Header";
 import Carousel, { carouselImages } from "./Carousel";

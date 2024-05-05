@@ -46,7 +46,7 @@ const navigate = useNavigate()
               onClick={() =>handleCardClick("Gas Cylinder")}
             />
             <ProductCard
-              image="src/assets/Rectangle 42.png"
+              image="src/assets/Rectangle42.png"
               btnTitle="Gas Filling"
               rating={3}
               onClick={() =>handleCardClick("Gas Filling")}
