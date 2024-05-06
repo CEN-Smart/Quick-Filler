@@ -16,7 +16,7 @@ function Experience() {
 					<div className='flex items-center gap-1 mt-6'>
 						<a
 							className='bg-[#409CD4] px-4 py-[.65rem] rounded-md inline-block text-white text-sm md:text-md hover:bg-[#2F7DA6] transition duration-300 ease-in-out'
-							href='learn-more'
+							href='/services'
 							target='_blank'
 							rel='noreferrer'>
 							Learn More

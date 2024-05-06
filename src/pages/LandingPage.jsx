@@ -36,6 +36,8 @@ function LandingPage() {
 				secondLabel='Reduction in Transaction Time with XRP Integration'
 				img={pumpAttendant}
 				btnGroup
+				label={"Learn More"}
+				href={"/services"}
 			/>
 			<div>
 				<h1 className='text-[#409CD4] font-roboto text-3xl font-medium leading-9 text-center mt-20'>
@@ -48,7 +50,7 @@ function LandingPage() {
 						alt='Fluent Box'
 						label='Wide variety of gas options to
             choose from'
-						link='/learn-more'
+						link='/services'
 						linkLabel='Learn More'
 						icon='>'
 					/>

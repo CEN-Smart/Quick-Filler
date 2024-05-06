@@ -16,9 +16,20 @@ function Services() {
 
 	return (
 		<div>
-			<div className='relative flex items-center content-center justify-center pt-16 pb-32'>
+			<div className='relative flex items-center content-center justify-center '>
 				<div className='absolute top-0 z-10 w-full min-h-screen bg-top bg-cover'>
 					<Carousel images={serviceCarousel} />
+				</div>
+				<div
+					className='relative mx-auto '
+					style={{ zIndex: 10 }}>
+					<div className='flex flex-wrap items-center'>
+						<div className='grid w-full min-h-screen px-4 text-center place-items-center'>
+							<div className=''>
+								<h1 className='text-5xl font-semibold text-white '>Services</h1>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div className='xl:pt-[54rem] md:pt-[35rem] sm:pt-[25rem] pt-[20rem] pb-20 container-width space-y-10'>

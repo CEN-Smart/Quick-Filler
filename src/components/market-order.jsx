@@ -11,6 +11,8 @@ MarketOrder.propTypes = {
   btnGroup: PropTypes.bool,
   img: PropTypes.string,
   alt: PropTypes.string,
+  label: PropTypes.string,
+  href: PropTypes.string,
 
 };
 
@@ -24,6 +26,8 @@ export function MarketOrder({
   secondLabel,
   btnGroup,
   img,
+  label,
+  href,
 }) {
   return (
     <section className=' max-w-[1200px] mx-auto mt-20'>
@@ -51,7 +55,7 @@ export function MarketOrder({
           </div>
           {btnGroup && (
             <div className='flex items-center gap-1'>
-              <LearnMoreButton /> <ConnectWallet btnText="Connect Wallet"/>
+              <LearnMoreButton label={label} href={href}/> <ConnectWallet btnText="Connect Wallet"/>
             </div>
           )}
         </div>

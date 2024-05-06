@@ -21,7 +21,7 @@ function Payment() {
           Follow these steps to place an order and make secure<br/> payments using
             XRP
           </p>
-          <NavLink to="/more " className="modify">
+          <NavLink to="/more" className="modify">
             Learn More <FaAngleRight />
           </NavLink>
         </div>
