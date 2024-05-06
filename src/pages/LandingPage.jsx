@@ -81,6 +81,8 @@ function LandingPage() {
 				title='Connect your to access our convenient gas filling services.'
 				img={cookingGas}
 				btnGroup
+				label={"Learn More"}
+				href={"/services"}
 			/>
 		</div>
 	);
