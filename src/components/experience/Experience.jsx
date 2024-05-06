@@ -17,9 +17,7 @@ function Experience() {
 					<div className='flex items-center gap-1 mt-6'>
 						<Link
 							className='bg-[#409CD4] px-4 py-[.65rem] rounded-md inline-block text-white text-sm md:text-md hover:bg-[#2F7DA6] transition duration-300 ease-in-out'
-							to="/services"
-							target='_blank'
-							rel='noreferrer'>
+							to="/services">
 							Learn More
 						</Link>
 						<ConnectWallet btnText='Connect Wallet' />
