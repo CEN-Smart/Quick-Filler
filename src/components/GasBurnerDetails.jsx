@@ -5,12 +5,9 @@ import Male from '/maleAttendant.jpeg';
 import Carousel from './Carousel';
 import { useNavigate } from 'react-router-dom';
 import ConnectWallet from './connect/ConnectWallet';
+import { GasCylinderForm } from './form/gas-cylinder-form';
 
-const carouselImages = [
-	'./../assets/prd1.png',
-	'./../assets/prd2.png',
-	'./../assets/prd3.png',
-];
+const carouselImages = ['/prd1.png', '/prd2.png', '/prd3.png'];
 function GasBurnerDetails() {
 	const [quantity, setQuantity] = useState(1);
 	const navigate = useNavigate();
@@ -89,14 +86,16 @@ function GasBurnerDetails() {
 					</div>
 				</div>
 			</div>
-			<div className='container flex justify-center flex-grow mx-auto mt-32 p '>
-				<div className='w-full p-8 mx-auto mt-10 bg-white rounded-lg shadow-lg'>
-					<div className='flex flex-row justify-between'>
+			<div className='container flex justify-center flex-grow mx-auto mt-32'>
+				<div className='xl:pt-[25rem] pt-0 pb-20 space-y-10 container-width'>
+					<div className='flex flex-col gap-6 md:flex-row'>
 						<img
 							src={Burner}
 							alt='Gas Cylinder'
-							className='object-cover rounded-lg basis-2/5 h-80 shrink-0'
+							className='flex-1 aspect-[16/9] rounded-lg object-fit shrink-0 '
 						/>
+
+						<GasCylinderForm className='flex-1 shrink-0' />
 						<div>
 							<h2 className='mt-4 text-4xl font-bold text-green-600'>
 								Gas Burner

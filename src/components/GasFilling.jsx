@@ -1,14 +1,9 @@
 import { useState } from 'react';
 import Dl from '../assets/dl.png';
-
 import Carousel from './Carousel';
 import { useNavigate } from 'react-router-dom';
 
-const serviceCarousel = [
-	'./../assets/serv1.png',
-	'./../assets/serv2.png',
-	'./../assets/serv3.png',
-];
+const serviceCarousel = ['/serv1.png', '/serv2.png', '/serv3.png'];
 
 function GasFilling() {
 	const [activeButton, setActiveButton] = useState('');
@@ -25,15 +20,15 @@ function GasFilling() {
 			<div
 				className='relative flex items-center content-center justify-center pt-16 pb-32'
 				style={{ minHeight: '100vh' }}>
-				<div className='absolute top-0 w-full bg-center bg-cover'>
+				<div className='absolute top-0 w-full bg-top bg-cover'>
 					<Carousel images={serviceCarousel} />
 				</div>
 				<div
-					className='container relative mx-auto '
+					className='relative mx-auto '
 					style={{ zIndex: 10 }}>
 					<div className='flex flex-wrap items-center'>
-						<div className='w-full px-4 ml-auto mr-auto text-center lg:w-6/12'>
-							<div className='pr-12'>
+						<div className='w-full px-4 text-center'>
+							<div className=''>
 								<h1 className='text-5xl font-semibold text-white '>Services</h1>
 							</div>
 							<div className='absolute right-0 z-10 flex flex-col w-48 gap-3 p-3 bg-white top-40 h-30'>
