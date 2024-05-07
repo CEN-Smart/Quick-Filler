@@ -113,7 +113,7 @@ function FuelFillingDetails() {
 									))}
 								</div>
 								<div className='flex flex-col gap-2 border-t border-gray-600'>
-									<h3 className='mt-4'>Select Kg</h3>
+									<h3 className='mt-4'>Select liters</h3>
 									<p>Input delivery address</p>
 								</div>
 								<div className='flex flex-row items-center justify-center mt-4'>
