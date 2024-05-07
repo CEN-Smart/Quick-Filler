@@ -5,6 +5,7 @@ import Blue from '/Rectangle42.png';
 import Carousel from './Carousel';
 import { useNavigate } from 'react-router-dom';
 import ConnectWallet from './connect/ConnectWallet';
+import { GasCylinderForm } from './form/gas-cylinder-form';
 
 const carouselImages = ['/prd1.png', '/prd2.png', '/prd3.png'];
 
@@ -20,7 +21,6 @@ function GasCylinderDetails() {
 	const features = [
 		{ id: 1, text: 'Size of the cylinder' },
 		{ id: 2, text: 'Select the quick filler station of your choice' },
-		
 	];
 	const renderStars = () => {
 		let stars = [];
@@ -73,64 +73,26 @@ function GasCylinderDetails() {
 					<Carousel images={carouselImages} />
 				</div>
 				<div
-					className='container relative mx-auto '
+					className='relative mx-auto '
 					style={{ zIndex: 10 }}>
-					<div className='flex flex-wrap items-center'>
-						<div className='w-full px-4 ml-auto mr-auto text-center lg:w-6/12'>
-							<div className='pr-12'>
+					<div className='xl:pt-[25rem] pt-0 pb-20 space-y-10 container-width'>
+						<div className=''>
+							<div className=''>
 								<h1 className='text-5xl font-semibold text-white '>Product</h1>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div className='container flex justify-center flex-grow mx-auto mt-32 p '>
-				<div className='w-full p-8 mx-auto mt-10 bg-white rounded-lg shadow-lg'>
-					<div className='flex flex-row justify-between'>
+			<div className='container flex justify-center flex-grow mx-auto mt-32 '>
+				<div className='xl:pt-[25rem] pt-0 pb-20 space-y-10 container-width'>
+					<div className='flex flex-col gap-6 md:flex-row'>
 						<img
 							src={Cylinder}
 							alt='Gas Cylinder'
-							className='object-cover rounded-lg basis-2/5 h-80 shrink-0'
+							className='flex-1 aspect-[16/9] rounded-lg object-fit shrink-0 '
 						/>
-						<div>
-							<h2 className='mt-4 text-4xl font-bold text-green-600'>
-								Gas Cylinder
-							</h2>
-							<div className='flex mt-2'>
-								{renderStars()}
-								<span className='ml-2 text-sm text-gray-600'>
-									{totalReviews}
-								</span>
-							</div>
-							<div>
-								<div className='flex flex-col gap-2 mt-4 list-disc'>
-									{features.map(feature => (
-										<p key={feature.id}>{feature.text}</p>
-									))}
-								</div>
-								<div className='flex flex-col gap-2 border-t border-gray-600'>
-									<h3 className='mt-4'>Select Gas Kg</h3>
-									<p>Select prefer color</p>
-									<p>Input delivery address</p>
-								</div>
-								<div className='flex flex-row items-center justify-center mt-4'>
-									<button
-										onClick={decrementQuantity}
-										className='block px-5 py-2 text-xl font-semibold border rounded hover:bg-gray-200'>
-										-
-									</button>
-									<span className='px-5 py-2 text-lg font-medium border'>
-										{quantity}
-									</span>
-									<button
-										onClick={incrementQuantity}
-										className='block px-5 py-2 text-xl font-semibold border rounded hover:bg-gray-200'>
-										+
-									</button>
-									<ConnectWallet btnText='Connect Wallet & pay' />
-								</div>
-							</div>
-						</div>
+						<GasCylinderForm className='flex-1 shrink-0' />
 					</div>
 					<div className='flex flex-row justify-between'>
 						<div>
