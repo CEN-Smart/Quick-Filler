@@ -94,7 +94,46 @@ function GasBurnerDetails() {
 							alt='Gas Cylinder'
 							className='flex-1 aspect-[16/9] rounded-lg object-fit shrink-0 '
 						/>
+
 						<GasCylinderForm className='flex-1 shrink-0' />
+						<div>
+							<h2 className='mt-4 text-4xl font-bold text-green-600'>
+								Gas Burner
+							</h2>
+							<div className='flex mt-2'>
+								{renderStars()}
+								<span className='ml-2 text-sm text-gray-600'>
+									{totalReviews}
+								</span>
+							</div>
+							<div>
+								<div className='flex flex-col gap-2 mt-4 list-disc'>
+									{features.map(feature => (
+										<p key={feature.id}>{feature.text}</p>
+									))}
+								</div>
+								<div className='flex flex-col gap-2 border-t border-gray-600'>
+									<h3 className='mt-4'>Select Type</h3>
+									<p>Input delivery address</p>
+								</div>
+								<div className='flex flex-row items-center justify-center mt-4'>
+									<button
+										onClick={decrementQuantity}
+										className='block px-5 py-2 text-xl font-semibold border rounded hover:bg-gray-200'>
+										-
+									</button>
+									<span className='px-5 py-2 text-lg font-medium border'>
+										{quantity}
+									</span>
+									<button
+										onClick={incrementQuantity}
+										className='block px-5 py-2 text-xl font-semibold border rounded hover:bg-gray-200'>
+										+
+									</button>
+									<ConnectWallet btnText='Connect Wallet & pay' />
+								</div>
+							</div>
+						</div>
 					</div>
 					<div className='flex flex-row justify-between'>
 						<div>
