@@ -20,7 +20,7 @@ function GasCylinderDetails() {
 	const features = [
 		{ id: 1, text: 'Size of the cylinder' },
 		{ id: 2, text: 'Select the quick filler station of your choice' },
-		{ id: 3, text: 'Select Cylinder Kg' },
+		
 	];
 	const renderStars = () => {
 		let stars = [];
@@ -109,7 +109,7 @@ function GasCylinderDetails() {
 									))}
 								</div>
 								<div className='flex flex-col gap-2 border-t border-gray-600'>
-									<h3 className='mt-4'>Select Kg</h3>
+									<h3 className='mt-4'>Select Gas Kg</h3>
 									<p>Select prefer color</p>
 									<p>Input delivery address</p>
 								</div>
