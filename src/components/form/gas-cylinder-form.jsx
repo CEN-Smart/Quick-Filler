@@ -48,10 +48,12 @@ export function GasCylinderForm({ className }) {
 						className='flex-1'
 						{...register('kg')}
 						id='kg'>
-						{Array.from({ length: 100 }, (_, i) => (
+						{[3, 5, 6, 9, 12.5, 15, 19, 45].map(kg => (
 							<option
-								key={i}
-								value={`${i + 1}kg`}>{`${i + 1}kg`}</option>
+								key={kg}
+								value={kg}>
+								{kg} Kg
+							</option>
 						))}
 					</select>
 				</div>
@@ -65,10 +67,13 @@ export function GasCylinderForm({ className }) {
 						className='flex-1'
 						{...register('color')}
 						id='color'>
-						<option value='red'>Red</option>
-						<option value='blue'>Blue</option>
-						<option value='green'>Green</option>
-						<option value='yellow'>Yellow</option>
+						{['black', 'blue', 'yellow', 'orange', 'red'].map(color => (
+							<option
+								key={color}
+								value={color}>
+								{color}
+							</option>
+						))}
 					</select>
 				</div>
 				<div className='flex items-start gap-4'>

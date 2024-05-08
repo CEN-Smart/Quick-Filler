@@ -19,3 +19,23 @@ video {
 		@apply max-w-[1230px] w-full px-4 mx-auto;
 	}
 }
+
+.carousel.slide .carousel-indicators button {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+}
+
+/* .carousel.slide .carousel-indicators .active {
+	background-color: #409cd4;
+} */
+
+/* anchor element that starts with a class of carousel-control */
+
+a.carousel-control-prev,
+a.carousel-control-next {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	height: 50px;
+}
