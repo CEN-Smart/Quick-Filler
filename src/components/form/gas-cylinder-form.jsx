@@ -33,7 +33,7 @@ export function GasCylinderForm({ className }) {
 				className
 			)}>
 			<h1 className='text-[#189a59] font-semibold text-3xl text-center'>
-				Gas Filling
+				Purchase
 			</h1>
 			<form
 				className='space-y-6'
