@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../Footer';
 import Header from '../navbar/Header';
 import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function More() {
 	return (
@@ -22,26 +23,26 @@ function More() {
 			</div>
 			<div className='container flex-grow px-4 mx-auto'>
 				<div className='flex flex-col justify-center gap-4 p-6 bg-white'>
-					<div className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
+					<Link to="/about" className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
 						<span className='text-lg text-gray-800'>About us</span>{' '}
 						<FaArrowRight className='text-lg' />
-					</div>
-					<div className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
+					</Link>
+					<Link to="/services "className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
 						<span className='text-lg text-gray-800'>Services</span>{' '}
 						<FaArrowRight className='text-lg' />
-					</div>
-					<div className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
+					</Link>
+					<Link to="/product" className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
 						<span className='text-lg text-gray-800'>Product</span>{' '}
 						<FaArrowRight className='text-lg' />
-					</div>
-					<div className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
+					</Link>
+					<Link to="/faqSection" className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
 						<span className='text-lg text-gray-800'>FAQ</span>{' '}
 						<FaArrowRight className='text-lg' />
-					</div>
-					<div className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
+					</Link>
+					<Link to="/blog" className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
 						<span className='text-lg text-gray-800'>Blogs/News</span>{' '}
 						<FaArrowRight className='text-lg' />
-					</div>
+					</Link>
 
 					<div className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
 						<span className='text-lg text-gray-800'>
