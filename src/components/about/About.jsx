@@ -17,7 +17,12 @@ const About = () => {
 					<div className='flex flex-wrap items-center'>
 						<div className='w-full px-4 ml-auto mr-auto text-center'>
 							<div className=''>
-								<h1 className='text-5xl font-semibold text-white'>About us</h1>
+								<h1 className='relative text-5xl font-semibold text-white'>
+									About us
+									<span
+										className='absolute h-px transform -translate-x-1/2 bg-white w-28 -bottom-2 left-1/2'
+										text-white></span>
+								</h1>
 							</div>
 						</div>
 					</div>
