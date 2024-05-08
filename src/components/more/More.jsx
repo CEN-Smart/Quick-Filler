@@ -27,7 +27,7 @@ function More() {
 						<span className='text-lg text-gray-800'>About us</span>{' '}
 						<FaArrowRight className='text-lg' />
 					</Link>
-					<Link to="/services "className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
+					<Link to="/services"className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
 						<span className='text-lg text-gray-800'>Services</span>{' '}
 						<FaArrowRight className='text-lg' />
 					</Link>
@@ -35,7 +35,7 @@ function More() {
 						<span className='text-lg text-gray-800'>Product</span>{' '}
 						<FaArrowRight className='text-lg' />
 					</Link>
-					<Link to="/faqSection" className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
+					<Link to="/faqsection" className='flex justify-between items-center p-5 bg-[#085A8B12] cursor-pointer hover:bg-blue-100 transition-colors'>
 						<span className='text-lg text-gray-800'>FAQ</span>{' '}
 						<FaArrowRight className='text-lg' />
 					</Link>
