@@ -1,21 +1,16 @@
-//carousels/Bootstrap.js
-import { useState } from 'react';
-import { items } from '/public/items.json';
 import { Carousel } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from './../../styles/Carousel.module.css';
-import { Link } from 'react-router-dom';
 import { cn } from '../../lib/utils';
+import { useCarousel } from '../../hooks/use-carousel';
 export default function ImageCarousel({ carouselItems }) {
-	const [index, setIndex] = useState(0);
-	const handleSelect = (selectedIndex, e) => {
-		setIndex(selectedIndex);
-	};
+	const { index, setIndex } = useCarousel();
 	return (
 		<Carousel
 			className='relative'
 			activeIndex={index}
-			onSelect={handleSelect}>
+			onSelect={selectedIndex => {
+				setIndex(selectedIndex);
+			}}>
 			{carouselItems.map(item => (
 				<Carousel.Item
 					key={item.id}
@@ -37,16 +32,20 @@ export default function ImageCarousel({ carouselItems }) {
 									<div
 										key={link.title}
 										className='shadow-md bg-slate-50 max-w-[342px] p-2'>
-										<Link
+										<span
+											onClick={() => {
+												setIndex(i);
+											}}
 											className={cn(
-												`flex flex-col items-center px-3 py-2 text-black text-sm font-semibold transition-colors duration-300 ease-in-out hover:bg-emerald-500 hover:text-white`,
+												`flex flex-col 
+                                                cursor-pointer
+                                                items-center px-3 py-2 text-black text-sm font-semibold transition-colors duration-300 ease-in-out hover:bg-emerald-500 hover:text-white`,
 												{
 													'bg-[#189a59] text-white': index === i,
 												}
-											)}
-											to={link.url}>
+											)}>
 											{link.title}
-										</Link>
+										</span>
 									</div>
 								))}
 							</div>

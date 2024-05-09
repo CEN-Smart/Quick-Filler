@@ -1,9 +1,4 @@
-// Select input field for  Gas Kg
-// Select input field for prefer color
-
-// textarea field for delivery address
 import { useForm } from 'react-hook-form';
-import { useCylinderCount } from '../../hooks/cylinder-count';
 import { cn } from '../../lib/utils';
 
 export function GasCylinderForm({ className }) {
